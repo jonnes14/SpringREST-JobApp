@@ -1,0 +1,21 @@
+package com.jonnes.SpringREST_JobAPP.service;
+
+import com.jonnes.SpringREST_JobAPP.model.JobPost;
+import com.jonnes.SpringREST_JobAPP.repo.JobRepo;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import java.util.List;
+
+@Service
+public class JobService {
+    @Autowired
+    public JobRepo repo;
+
+    public void addjob(JobPost jobPost){
+        repo.addjob(jobPost);
+    }
+    public List<JobPost> getAlljobs(){
+      return repo.getAlljobs();
+    }
+}
