@@ -27,4 +27,13 @@ public class JobRepo {
     public List<JobPost> getAlljobs() {
         return jobs;
     }
+
+    public JobPost getJob(int postId) {
+            for(JobPost job: jobs){
+                if(job.getPostId()==postId){
+                    return job;
+                }
+            }
+            return null;
+    }
 }
