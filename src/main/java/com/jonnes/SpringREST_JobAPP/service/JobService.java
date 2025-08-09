@@ -30,4 +30,8 @@ public class JobService {
     public void deletejob(int postId) {
         repo.deleteById(postId);
     }
+
+    public List<JobPost> search(String keyword) {
+        return repo.findByPostProfileContainingOrPostDescContaining(keyword,keyword);
+    }
 }

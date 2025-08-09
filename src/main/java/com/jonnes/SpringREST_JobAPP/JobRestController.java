@@ -24,6 +24,11 @@ public class JobRestController {
         return service.getJob(postId);
     }
 
+    @GetMapping("jobPosts/keyword/{keyword}")
+    public List<JobPost> searchKeyword(@PathVariable String keyword){
+        return service.search(keyword);
+    }
+
     @PostMapping("jobPost")
     public void addjob(@RequestBody JobPost jobPost){
         service.addjob(jobPost);
