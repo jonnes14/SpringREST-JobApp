@@ -1,4 +1,4 @@
-# React + Spring Boot Fullstack App Setup
+# React + Spring Boot Job App Setup
 
 This guide walks through creating a full-stack project with **Spring Boot (Backend)** and **React (Frontend)** from scratch, with clear structure and no extra clutter.
 
