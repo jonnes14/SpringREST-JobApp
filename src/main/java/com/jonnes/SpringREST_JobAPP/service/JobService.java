@@ -13,21 +13,21 @@ public class JobService {
     public JobRepo repo;
 
     public void addjob(JobPost jobPost){
-        repo.addjob(jobPost);
+        repo.save(jobPost);
     }
     public List<JobPost> getAlljobs(){
-      return repo.getAlljobs();
+      return repo.findAll();
     }
 
     public JobPost getJob(int postId) {
-        return repo.getJob(postId);
+        return repo.findById(postId).orElse(new JobPost());
     }
 
     public void updatejob(JobPost jobPost) {
-        repo.updatejob(jobPost);
+        repo.save(jobPost);
     }
 
     public void deletejob(int postId) {
-        repo.deletejob(postId);
+        repo.deleteById(postId);
     }
 }
